@@ -6,7 +6,7 @@ function insertionSort(arr){
       arr[sorted+1] = arr[sorted]
       sorted = sorted -1
     }
-    arr[sorted + 1] = numberToSort
+    arr[sorted +1] = numberToSort
   }
 }
 
