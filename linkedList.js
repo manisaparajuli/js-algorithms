@@ -19,7 +19,7 @@ class LinkedList{
     return this.size
   }
 
-  prepend(value){    //adding elements at start of the list
+  prepend(value){    //adding elements at start of the list => 0(1)
     const node = new Node(value)
     if(this.isEmpty()){
       this.head = node
@@ -30,7 +30,7 @@ class LinkedList{
     this.size++
   }
 
-  append(value){  //adding elements at end of the list
+  append(value){  //adding elements at end of the list => 0(n)
     const node = new Node(value)
     if(this.isEmpty()){
       this.head = node
