@@ -1,8 +1,17 @@
-function array1(){
-  let array = [1,2,3,4,5,2,6]
-  // let num = array.push(2);
-  let num = array.pop(2);
-  console.log(array)
-  return num;
+function bubbleSort(arr){
+  let swap = false;
+  // let sortedArr = [];
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] > arr[i+1]){
+      swap = true;
+      let temp = arr[i];
+      arr[i] = arr[i+1];
+      arr[i+1] = temp;
+    }else{
+      swap = false;
+    }
+  }
+  return arr;
+
 }
-console.log(array1())
+console.log(bubbleSort([2,1,5,3,6]))
