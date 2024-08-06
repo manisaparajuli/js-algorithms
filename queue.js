@@ -1,42 +1,49 @@
 class Queue{
   constructor(){
-    this.item = []
+    this.items = [];
   }
 
   enqueue(element){
-    this.item.push(element)
+    this.items.push(element)
   }
 
   dequeue(){
-    return this.item.shift()
-  }
-
-  isEmpty(){
-    return this.item.length === 0
+    return this.items.shift()
   }
 
   peek(){
-    if(this.isEmpty){
-      return this.item[0]
+    if(!this.isEmpty()){
+      return this.items[0]
+    }else{
+      return null
     }
-    return null
   }
+
+  isEmpty(){
+    if(this.items.length === 0){
+      return true
+    }
+    return false
+  }
+
   size(){
-    return this .item.length
+    return this.items.length
   }
 
   print(){
-    console.log(this.item.toString())
+    console.log(this.items.toString())
   }
 }
 
-const queue = new Queue()
-console.log(queue.isEmpty())
+const queue = new Queue();
 queue.enqueue(2)
 queue.enqueue(3)
 queue.enqueue(4)
-queue.enqueue(5)
-queue.enqueue(6)
-console.log(queue.size())
+queue.print()
 
-console.log(queue.dequeue())
+queue.dequeue()
+queue.print()
+
+queue.peek();
+
+
